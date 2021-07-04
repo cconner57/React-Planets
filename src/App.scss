@@ -3,14 +3,6 @@
 $lightGray: hsl(240, 6%, 54%);
 $gray: hsl(240, 17%, 26%);
 $darkGray: hsl(240, 67%, 8%);
-$lightBlue: hsl(194, 48%, 49%);
-$blue: hsl(222, 87%, 56%);
-$lightOrange: hsl(17, 73%, 46%);
-$orange: hsl(10, 63%, 51%);
-$darkOrange: hsl(2, 68%, 53%);
-$yellow: hsl(33, 82%, 61%);
-$purple: hsl(263, 67%, 51%);
-$teal: hsl(169, 73%, 44%);
 $white: hsl(0, 0%, 100%);
 
 @mixin h1 {
@@ -55,7 +47,7 @@ $white: hsl(0, 0%, 100%);
 }
 
 .App {
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     background-color: $darkGray;
     background-image: url(./images/background-stars.svg);
@@ -70,15 +62,29 @@ nav {
     border-bottom: 1px solid hsla(0,0%,100%,0.2);
     h1 {
         font-family: "Antonio";
-        font-size: 28px;
+        font-size: clamp(0.5rem, 2.5vw, 2.5rem);
         line-height: 36.26px;
         letter-spacing: -1.05px;
+        cursor: pointer;
     }
     .nav-items {
         @include h4;
-        width: 50vw;
+        width: 60vw;
+        margin-left: auto;
+        padding: 0 1rem;
         display: flex;
-        justify-content: space-around
+        justify-content: space-around;
+        align-items: center;
+        font-size: clamp(0.3rem, 1vw, 0.8rem);
+        cursor: pointer;
+        h2 {
+            padding: 0.5rem 0.8rem;
+        }
+        h2:hover {
+            transition: 0.15s ease all;
+            border-radius: 25px;
+            background-color: $lightGray;
+        }
     }
 }
 
@@ -96,6 +102,15 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        .image-container {
+            position: relative;
+            .image-geology {
+                margin: auto;
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: -25rem;
+                max-width: 12rem;
+            }
+        }
     }
     .planet-info {
         width: 35vw;
@@ -133,16 +148,33 @@ main {
     background-color: hsla(0, 0%, 0%, 0%);
     border: 1px solid $gray;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
     span {
         margin-right: 28px;
-        color: $lightGray;
         background-color: hsla(0, 0%, 0%, 0%);
-    }
-    &:active {
-        background-color: $lightBlue;
     }
     &:hover {
         background-color: $gray;
+    }
+}
+
+.button-active {
+    @include h3;
+    width: 350px;
+    height: 48px;
+    margin-bottom: 1rem;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    color: $white;
+    border: 1px solid $gray;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    span {
+        margin-right: 28px;
+        background-color: hsla(0, 0%, 0%, 0%);
     }
 }
 
@@ -152,7 +184,7 @@ footer {
     justify-content: space-evenly;
     text-transform: uppercase;
     .planet-details {
-        width: 255px;
+        width: 240px;
         height: 128px;
         margin-bottom: 56px;
         padding: 20px;
@@ -168,6 +200,29 @@ footer {
             color: $white;
             line-height: 51.76px;
             letter-spacing: -1.5px;
+        }
+    }
+}
+
+.mobileApp {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+        color: white;
+        font-size: 1.5rem;
+    }
+    .mobileApp-Stores {
+        display: flex;
+        .apple {
+            max-height: 70px;
+            margin-top: 15px;
+        }
+        .google {
+            max-height: 100px;
         }
     }
 }

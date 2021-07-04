@@ -1,57 +1,37 @@
-import React from 'react';
+import {useState} from 'react'
+import Planet from '../components/Planet';
+import PlanetImg from '../components/PlanetImg';
 
-import Mercury from '../images/planet-mercury.svg';
-import LinkIcon from '../images/icon-source.svg';
-
-const HomeScreen = () => {
+const HomeScreen = ({ planet }: any) => {
+	const [viewOption, setViewOption] = useState<string>('overview')
 	return (
 		<>
 			<main>
-				<div className='planet-image'>
-					<img src={Mercury} alt='Mercury' />
-				</div>
-				<div className='planet-info'>
-					<h1 className='planet-title'>Mercury</h1>
-					<p className='planet-content'>
-						Mercury is the smallest planet in the Solar System and the closest
-						to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
-						shortest of all the Sun's planets. Mercury is one of four
-						terrestrial planets in the Solar System, and is a rocky body like
-						Earth.
-					</p>
-					<p className='planet-link'>
-						<span>Source: </span>
-						<a href='https://en.wikipedia.org/wiki/Mercury_(planet)'>
-							Wikipedia <img src={LinkIcon} alt='Wikipedia' />
-						</a>
-					</p>
-					<button className='button'>
-						<span>01</span> Overview
-					</button>
-					<button className='button'>
-						<span>01</span> Internal Structure
-					</button>
-					<button className='button'>
-						<span>01</span> Surface Geology
-					</button>
-				</div>
+				<PlanetImg planet={planet.name} viewOption={viewOption} />
+				<Planet
+					title={planet.name}
+					content={planet[viewOption].content}
+					link={planet[viewOption].source}
+					viewOption={viewOption}
+					setViewOption={setViewOption}
+				/>
 			</main>
 			<footer>
 				<div className='planet-details'>
 					<h3>Rotation Time</h3>
-					<p>58.6 Days</p>
+					<p>{planet.rotation}</p>
 				</div>
 				<div className='planet-details'>
 					<h3>Revolution Time</h3>
-					<p>87.97 Days</p>
+					<p>{planet.revolution}</p>
 				</div>
-                <div className='planet-details'>
+				<div className='planet-details'>
 					<h3>Radius</h3>
-					<p>2,439.7 KM</p>
+					<p>{planet.radius}</p>
 				</div>
-                <div className='planet-details'>
+				<div className='planet-details'>
 					<h3>Average Temp.</h3>
-					<p>430°C</p>
+					<p>{planet.temperature}</p>
 				</div>
 			</footer>
 		</>

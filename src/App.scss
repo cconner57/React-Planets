@@ -62,7 +62,7 @@ nav {
     border-bottom: 1px solid hsla(0,0%,100%,0.2);
     h1 {
         font-family: "Antonio";
-        font-size: clamp(0.5rem, 2.5vw, 2.5rem);
+        font-size: clamp(0.75rem, 2.5vw, 2.5rem);
         line-height: 36.26px;
         letter-spacing: -1.05px;
         cursor: pointer;
@@ -126,7 +126,7 @@ main {
         .planet-link {
             margin: 1.5rem 0 39px;
             span {
-                color: $gray;
+                color: $lightGray;
             }
             a {
                 color: $lightGray;

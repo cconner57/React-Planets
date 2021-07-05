@@ -1,9 +1,28 @@
-import {useState} from 'react'
+import { useState } from 'react';
 import Planet from '../components/Planet';
 import PlanetImg from '../components/PlanetImg';
 
+interface PlanetObject {
+	planet: {
+		name: string;
+		overview: PlanetContent;
+		structure: PlanetContent;
+		geology: PlanetContent;
+		rotation: string;
+		revolution: string;
+		radius: string;
+		temperature: string;
+	}
+}
+
+interface PlanetContent {
+	content: string;
+	source: string;
+}
+
 const HomeScreen = ({ planet }: any) => {
-	const [viewOption, setViewOption] = useState<string>('overview')
+	const [viewOption, setViewOption] = useState<string>('overview');
+
 	return (
 		<>
 			<main>

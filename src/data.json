@@ -16,12 +16,7 @@
     "rotation": "58.6 Days",
     "revolution": "87.97 Days",
     "radius": "2,439.7 KM",
-    "temperature": "430°c",
-    "images": {
-      "planet": "./assets/planet-mercury.svg",
-      "internal": "./assets/planet-mercury-internal.svg",
-      "geology": "./assets/geology-mercury.png"
-    }
+    "temperature": "430°c"
   },
   {
     "name": "Venus",
@@ -40,12 +35,7 @@
     "rotation": "243 Days",
     "revolution": "224.7 Days",
     "radius": "6,051.8 KM",
-    "temperature": "471°c",
-    "images": {
-      "planet": "./assets/planet-venus.svg",
-      "internal": "./assets/planet-venus-internal.svg",
-      "geology": "./assets/geology-venus.png"
-    }
+    "temperature": "471°c"
   },
   {
     "name": "Earth",
@@ -64,12 +54,7 @@
     "rotation": "0.99 Days",
     "revolution": "365.26 Days",
     "radius": "6,371 KM",
-    "temperature": "16°c",
-    "images": {
-      "planet": "./assets/planet-earth.svg",
-      "internal": "./assets/planet-earth-internal.svg",
-      "geology": "./assets/geology-earth.png"
-    }
+    "temperature": "16°c"
   },
   {
     "name": "Mars",
@@ -88,12 +73,7 @@
     "rotation": "1.03 Days",
     "revolution": "1.88 Years",
     "radius": "3,389.5 KM",
-    "temperature": "-28°c",
-    "images": {
-      "planet": "./assets/planet-mars.svg",
-      "internal": "./assets/planet-mars-internal.svg",
-      "geology": "./assets/geology-mars.png"
-    }
+    "temperature": "-28°c"
   },
   {
     "name": "Jupiter",
@@ -112,12 +92,7 @@
     "rotation": "9.93 Hours",
     "revolution": "11.86 Years",
     "radius": "69,911 KM",
-    "temperature": "-108°c",
-    "images": {
-      "planet": "./assets/planet-jupiter.svg",
-      "internal": "./assets/planet-jupiter-internal.svg",
-      "geology": "./assets/geology-jupiter.png"
-    }
+    "temperature": "-108°c"
   },
   {
     "name": "Saturn",
@@ -136,12 +111,7 @@
     "rotation": "10.8 Hours",
     "revolution": "29.46 Years",
     "radius": "58,232 KM",
-    "temperature": "-138°c",
-    "images": {
-      "planet": "./assets/planet-saturn.svg",
-      "internal": "./assets/planet-saturn-internal.svg",
-      "geology": "./assets/geology-saturn.png"
-    }
+    "temperature": "-138°c"
   },
   {
     "name": "Uranus",
@@ -160,12 +130,7 @@
     "rotation": "17.2 Hours",
     "revolution": "84 Years",
     "radius": "25,362 KM",
-    "temperature": "-195°c",
-    "images": {
-      "planet": "./assets/planet-uranus.svg",
-      "internal": "./assets/planet-uranus-internal.svg",
-      "geology": "./assets/geology-uranus.png"
-    }
+    "temperature": "-195°c"
   },
   {
     "name": "Neptune",
@@ -184,11 +149,6 @@
     "rotation": "16.08 Hours",
     "revolution": "164.79 Years",
     "radius": "24,622 KM",
-    "temperature": "-201°c",
-    "images": {
-      "planet": "./assets/planet-neptune.svg",
-      "internal": "./assets/planet-neptune-internal.svg",
-      "geology": "./assets/geology-neptune.png"
-    }
+    "temperature": "-201°c"
   }
 ]
